@@ -7,8 +7,6 @@ const [todo, setTodo]= useState({
     title:'',
     content:''
 })
-// const [title, setTodoTitle]= useState('')
-
 const [todoArray, setTodoArr]= useState([]);
 
 const getTodo=(e)=>{
@@ -16,6 +14,8 @@ const getTodo=(e)=>{
     setTodo(current=>({
         ...current, [name]:value
     }));
+    
+    
 }
 const deleteItem=(id)=>{
     setTodoArr(prevValues=>{
@@ -27,14 +27,17 @@ const deleteItem=(id)=>{
 
 const getTodoArray=(e)=>{
     e.preventDefault();
-    setTodoArr(prevTodo=> [...prevTodo,todo])
+   setTodoArr(prevTodo=> [...prevTodo,todo]) 
+   setTodo({
+    title:'',
+    content:''})   
 }
   
   return (
     <div>
       <form>
-        <input name="title" placeholder="Title" value={todo.value} onChange={getTodo}/>
-        <textarea name="content" placeholder="Take a note..."value={todo.value} rows="3" onChange={getTodo}/>
+        <input name="title" placeholder="Title" value={todo.title} onChange={getTodo}/>
+        <textarea name="content" placeholder="Take a note..." value={todo.content} rows="3" onChange={getTodo}/>
         <button onClick={getTodoArray}>Add</button>
       </form>
       {todoArray.map((item, index) =>
