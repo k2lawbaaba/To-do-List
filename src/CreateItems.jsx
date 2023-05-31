@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Note from "./Note";
 import "./styles.css"
+import AddIcon from '@mui/icons-material/Add';
 
 function CreateItems() {
 const [todo, setTodo]= useState({
@@ -38,7 +39,7 @@ const getTodoArray=(e)=>{
       <form>
         <input name="title" placeholder="Title" value={todo.title} onChange={getTodo}/>
         <textarea name="content" placeholder="Take a note..." value={todo.content} rows="3" onChange={getTodo}/>
-        <button onClick={getTodoArray}>Add</button>
+        <button onClick={getTodoArray}><AddIcon /></button>
       </form>
       {todoArray.map((item, index) =>
         <Note 

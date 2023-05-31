@@ -1,4 +1,6 @@
 import React from "react";
+import './styles.css';
+
 
 let year = new Date().getFullYear();
 
