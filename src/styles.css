@@ -7,8 +7,12 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
+  /* background: #7444e3; */
   padding: 0 16px;
+  /* background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png"); */
+  background-color: #8a005e;
+  background-image: url("https://www.transparenttextures.com/patterns/flower-trail.png");
+
 }
 .app{
   display: flex;
@@ -17,7 +21,7 @@ body {
 }
 
 header {
-  background-color: #f5ba13;
+  background-color:rgb(39, 39, 136) ;
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -33,7 +37,7 @@ footer {
   text-align: center;
   margin:  40px auto 30px;
   width: 100%;
-  color: #ccc;
+  color: #848181;
   height: 2.5rem;
 }
 
@@ -45,6 +49,8 @@ footer {
   width: 240px;
   margin: 16px;
   float: left;
+  background-image: url("https://www.transparenttextures.com/patterns/flower-trail.png");
+
 }
 .note h1 {
   font-size: 1.1em;
@@ -63,8 +69,11 @@ footer {
   margin-right: 10px;
   color: white;
   border: none;
-  right: -5px;
-  background-color: #f5ba13;
+  right: -16px;
+  width: 36px;
+  bottom: -22px;
+  height: 36px;
+  background-color: rgb(39, 39, 136);
   cursor: pointer;
   outline: none;
 }
@@ -75,6 +84,7 @@ form {
   margin: 30px auto 20px auto;
   background: #fff;
   padding: 15px;
+  background-image: url("https://www.transparenttextures.com/patterns/black-lozenge.png");
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
@@ -83,22 +93,30 @@ form textarea {
   width: 100%;
   border: none;
   padding: 4px;
+  background-image: url("https://www.transparenttextures.com/patterns/black-lozenge.png");
   outline: none;
   font-size: 1.2em;
   font-family: inherit;
   resize: none;
+  color:black
 }
-form button {
-  position: absolute;
-  right: 14px;
-  bottom: -2px;
-  background: #f5ba13;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+
+
+.note button:hover{
+  background: #fc533c;
+  background-image: -webkit-linear-gradient(top, #fc533c, #361708);
+  background-image: -moz-linear-gradient(top, #fc533c, #361708);
+  background-image: -ms-linear-gradient(top, #fc533c, #361708);
+  background-image: -o-linear-gradient(top, #fc533c, #361708);
+  background-image: linear-gradient(to bottom, #fc533c, #361708);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  outline: none;
+  
+}
+form button:hover{
+    background: #73251b;
+  background-image: -webkit-linear-gradient(top, #73251b, #361708);
+  background-image: -moz-linear-gradient(top, #73251b, #361708);
+  background-image: -ms-linear-gradient(top, #73251b, #361708);
+  background-image: -o-linear-gradient(top, #73251b, #361708);
+  background-image: linear-gradient(to bottom, #73251b, #361708);
 }
